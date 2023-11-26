@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "love.chihuyu"
-version = "0.0.1-SNAPSHOT"
+version = "0.1.0"
 val pluginVersion: String by project.ext
 
 repositories {
@@ -35,7 +35,7 @@ dependencies {
 //    compileOnly("org.bukkit:bukkit:$pluginVersion-R0.1-SNAPSHOT")
     compileOnly("dev.jorel:commandapi-bukkit-core:9.2.0")
     compileOnly("dev.jorel:commandapi-bukkit-kotlin:9.2.0")
-    implementation("love.chihuyu:timer-api:1.4.1-SNAPSHOT")
+    compileOnly("love.chihuyu:TimerAPI:1.4.1-SNAPSHOT")
     compileOnly(kotlin("stdlib"))
 }
 
@@ -69,7 +69,6 @@ tasks {
 
     shadowJar {
         exclude("org/slf4j/**")
-        archiveAppendix.set("")
     }
 
     runServer {
