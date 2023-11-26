@@ -7,6 +7,7 @@ import love.chihuyu.lifeutilities.command.Command
 object SuicideCommand : Command {
     override fun register() {
         commandAPICommand("suicide") {
+            withPermission("lifeutilities.suicide")
             playerExecutor { player, _ ->
                 player.health = .0
             }

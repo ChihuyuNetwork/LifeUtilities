@@ -16,6 +16,7 @@ class LifeUtilitiesPlugin : JavaPlugin() {
 
     override fun onEnable() {
         super.onEnable()
+
         listOf(
             ImhereCommand,
             SuicideCommand
@@ -28,5 +29,12 @@ class LifeUtilitiesPlugin : JavaPlugin() {
         ).forEach {
             server.addRecipe(it)
         }
+
+        logger.info("LifeUtilities has loaded.")
+    }
+
+    override fun onDisable() {
+        super.onDisable()
+        logger.info("LifeUtilities has unloaded.")
     }
 }
