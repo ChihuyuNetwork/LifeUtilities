@@ -5,7 +5,7 @@ import dev.jorel.commandapi.kotlindsl.playerExecutor
 import love.chihuyu.lifeutilities.command.Command
 import net.kyori.adventure.text.Component
 
-object ImhereCommand: Command {
+object ImhereCommand : Command {
     override fun register() {
         commandAPICommand("imhere") {
             playerExecutor { player, _ ->

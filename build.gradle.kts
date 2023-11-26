@@ -53,11 +53,16 @@ tasks {
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
 
         from(sourceSets.main.get().resources.srcDirs) {
-            filter(org.apache.tools.ant.filters.ReplaceTokens::class, mapOf("tokens" to mapOf(
-                "version" to project.version.toString(),
-                "name" to project.name,
-                "mainPackage" to "love.chihuyu.${project.name.lowercase()}.${project.name}Plugin"
-            )))
+            filter(
+                org.apache.tools.ant.filters.ReplaceTokens::class,
+                mapOf(
+                    "tokens" to mapOf(
+                        "version" to project.version.toString(),
+                        "name" to project.name,
+                        "mainPackage" to "love.chihuyu.${project.name.lowercase()}.${project.name}Plugin"
+                    )
+                )
+            )
             filteringCharset = "UTF-8"
         }
     }
@@ -72,7 +77,7 @@ tasks {
     }
 }
 
-//publishing {
+// publishing {
 //    repositories {
 //        maven {
 //            name = "repo"
@@ -91,7 +96,7 @@ tasks {
 //            from(components["java"])
 //        }
 //    }
-//}
+// }
 
 kotlin {
     jvmToolchain(17)
@@ -122,7 +127,7 @@ task("setup") {
     }
 }
 
-//task("generateActionsFile") {
+// task("generateActionsFile") {
 //    doFirst {
 //        val actionFile = projectDir.resolve(".github/workflows").apply(File::mkdirs)
 //        actionFile.resolve("deploy.yml").writeText(
@@ -160,4 +165,4 @@ task("setup") {
 //            """.trimIndent()
 //        )
 //    }
-//}
+// }

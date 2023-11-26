@@ -5,7 +5,7 @@ import love.chihuyu.lifeutilities.command.commands.SuicideCommand
 import love.chihuyu.lifeutilities.recipe.CustomRecipes
 import org.bukkit.plugin.java.JavaPlugin
 
-class LifeUtilitiesPlugin: JavaPlugin() {
+class LifeUtilitiesPlugin : JavaPlugin() {
     companion object {
         lateinit var LifeUtilitiesPlugin: JavaPlugin
     }
